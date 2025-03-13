@@ -38,7 +38,7 @@ const getNewTodoId = (todos: Todo[]) => {
 export const App = () => {
   const [todos, setTodos] = useState<Todo[]>(initialTodos);
   const [title, setTitle] = useState('');
-  const [tileError, setTitleError] = useState(false);
+  const [titleError, setTitleError] = useState(false);
 
   const [selectUser, setSelectUser] = useState(0);
   const [selectUserError, setSelectUserError] = useState(false);
@@ -96,7 +96,7 @@ export const App = () => {
             placeholder="Enter your title"
             onChange={handleTitleChange}
           />
-          {tileError && <span className="error">Please enter a title</span>}
+          {titleError && <span className="error">Please enter a title</span>}
         </div>
 
         <div className="field">
